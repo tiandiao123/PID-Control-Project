@@ -17,14 +17,7 @@ public:
   double Ki;
   double Kd;
 
-  /*
-  * Constructor
-  */
   PID();
-
-  /*
-  * Destructor.
-  */
   virtual ~PID();
 
   /*
