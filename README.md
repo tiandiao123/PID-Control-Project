@@ -2,7 +2,7 @@
 
 ---
 ### Description of This Project:
-    The man idea of this project is used to apply PID controller to make cars controll itself more smoothly when the cars need to change directions by themselves. 
+The man idea of this project is used to apply PID controller to make cars controll itself more smoothly when the cars need to change directions by themselves. 
 
 ### Final Result of This Project:
 
