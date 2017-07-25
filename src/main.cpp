@@ -66,6 +66,7 @@ int main()
 
           current_time = clock();
           double dt = (current_time - pre_time)/CLOCKS_PER_SEC;
+          pid.UpdateError(cte,dt);
 
           
           // DEBUG

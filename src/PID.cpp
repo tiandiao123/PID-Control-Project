@@ -18,19 +18,21 @@ void PID::Init(double Kp_init, double Ki_init, double Kd_init) {
     p_error = 0;
     i_error = 0;
     d_error = 0;
-
-
+    
+    
 }
 
-void PID::UpdateError(double cte) {
-
+void PID::UpdateError(double cte, double dt) {
+    d_error = (cte-p_error)/dt;
+    p_error = cte;
+    i_error = Cal_Total_Integral(p_error, dt);
 }
 
 double PID::TotalError() {
 
 }
 
-double PID::Cal_Total_Integral(double dt){
-
-}
+double PID::Cal_Total_Integral(double cte, double dt){
+     i_error+=cte*dt;
+} 
 
