@@ -5,6 +5,8 @@
 ### Description of This Project:
 The man idea of this project is used to apply PID controller to make cars controll themselves more smoothly when the cars need to change directions by themselves. Using PID controller can make cars drive from one destination to another destination smoothly! More details can be checked in this [link](http://students.iitk.ac.in/roboclub/lectures/PID.pdf).
 
+Also, here is a good [demonstration](https://www.reddit.com/r/robotics/comments/3eb7ca/controlling_self_driving_cars_pid_explained/) why we need to use PID controller in the self-driving car. In this project, I am doing similiar thing. In other words, trying to use PID controller algorithm to make self-driving car drive by itself. 
+
 ### Final Result of This Project:
 
 ### Dependencies of This Project:
