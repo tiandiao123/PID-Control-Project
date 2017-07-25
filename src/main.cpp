@@ -58,9 +58,9 @@ int main()
           double angle = std::stod(j[1]["steering_angle"].get<std::string>());
           double steer_value;
           /*
-          * TODO: Calcuate steering value here, remember the steering value is
+          * Calcuate steering value here, remember the steering value is
           * [-1, 1].
-          * NOTE: Feel free to play around with the throttle and speed. Maybe use
+          * Feel free to play around with the throttle and speed. Maybe use
           * another PID controller to control the speed!
           */
 
@@ -68,8 +68,14 @@ int main()
           double dt = (current_time - pre_time)/CLOCKS_PER_SEC;
           pid.UpdateError(cte,dt);
           steer_value=-pid.TotalError();
-          
-          
+
+          if(steer_value<=-1){
+              steer_value=-1;
+          }else if(steering_value>=1){
+              steer_value=1;
+          }
+          pre_time = current_time;
+
           // DEBUG
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
 
