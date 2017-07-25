@@ -15,20 +15,23 @@ void PID::Init(double Kp_init, double Ki_init, double Kd_init) {
     i_error = 0;
     d_error = 0;
     
+    sum_error=0;
+    pre_cte=0;
     
 }
 
-void PID::UpdateError(double cte, double dt) {
-    d_error = (cte-p_error)/dt;
-    p_error = cte;
-    i_error = Cal_Total_Integral(p_error, dt);
+void PID::UpdateError(double cte) {
+    d_error = Kd*(cte-pre_cte);
+    pre_cte=cte;
+
+    p_error = Kp*cte;
+    
+    sum_error+=cte;
+    i_error = Ki*sum_error;
 }
 
 double PID::TotalError() {
-     return Kp * p_error+ Ki * i_error + Kd * d_error;
+     return p_error+ i_error + d_error;
 }
 
-double PID::Cal_Total_Integral(double cte, double dt){
-     i_error+=cte*dt;
-} 
 

@@ -16,6 +16,9 @@ public:
   double Kp;
   double Ki;
   double Kd;
+
+  double sum_error=0;
+  double pre_cte=0;
   
   PID();
   virtual ~PID();
@@ -34,9 +37,6 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
-  
-  //calcaulate integral error 
-  double Cal_Total_Integral(double cte, double dt);
 };
 
 #endif /* PID_H */
