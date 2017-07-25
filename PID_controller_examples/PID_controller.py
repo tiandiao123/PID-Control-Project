@@ -120,7 +120,6 @@ def run(robot, params, n=100, speed=1.0):
     x_trajectory = []
     y_trajectory = []
     err = 0
-    # TODO: your code here
     prev_cte = robot.y
     int_cte = 0
     for i in range(2 * n):
