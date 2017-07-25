@@ -1,6 +1,6 @@
-## CarND-Controls-PID (self-driving car project)
-## Author: Cuiqing Li
-## Time: July 2017
+### CarND-Controls-PID (self-driving car project)
+### Author: Cuiqing Li
+### Time: July 2017
 ---
 ### Description of This Project:
 The man idea of this project is used to apply PID controller to make cars controll themselves more smoothly when the cars need to change directions by themselves. Using PID controller can make cars drive from one destination to another destination smoothly! More details can be checked in this [link](http://students.iitk.ac.in/roboclub/lectures/PID.pdf).
